@@ -1,0 +1,576 @@
+*{
+   text-align: left;
+   font-family: 'Roboto', sans-serif;
+}
+
+html{
+    background-color: white;
+}
+
+ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+p{
+    margin:1em 15%;
+    size:1.25rem;
+    text-indent:2rem;
+    line-height:1.5em;
+}
+
+.noSelect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+/*Style for universal Nav*/
+/*---------------------------*/
+header{
+    position:fixed;
+    top:0;
+    background-color:#fff;
+    width:100%;
+    margin:auto;
+    border-bottom:#999 1px solid;
+    z-index: 100;
+}
+
+header h1{
+    display:inline;
+}
+
+nav{
+    float:right;
+    display:flex;
+    margin-right:0.5rem;
+}
+
+nav span{
+    padding: 0.5rem;
+}
+
+nav a{
+    text-decoration: none;
+    color:#000;
+
+}
+/*Style for portfolio main page*/
+/*------------------------------*/
+#personalWebsite h2.category{
+    text-align: center;
+    text-decoration: underline;
+    color:#555;
+}
+#aboutMe{
+    display:flex;
+    width:80%;
+    margin:auto;
+    margin-top:4rem;
+}
+
+.portfolioImageContainer{
+    display:block;
+    flex-shrink:0;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    overflow: hidden;
+}
+
+.portfolioImageContainer img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+
+
+.portfolioDescription h2, .portfolioDescription p{
+    padding:0;
+    margin:1rem 2rem;
+    margin-right:0;
+    text-indent: 0;
+}
+
+.contactContainer{
+    display:flex;
+    justify-content:left;
+    margin-left:2rem;
+}
+
+.contactContainer a{
+    text-decoration: none;
+    color:#000;
+}
+
+.contactContainer i{
+    margin:0.5rem;
+}
+
+.informationCards{
+    width:100%;
+    margin:1rem auto;
+    margin-bottom:3rem;
+    display:flex;
+    justify-content: space-evenly;
+}
+.informationCard{
+    display:inline-flex;
+    flex-direction:column;
+    border-radius: 10px;
+    width:30%;
+    overflow: hidden;
+}
+
+.informationCard img{
+    width:100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.informationCard img.logoImage{
+    object-fit: contain;
+}
+
+.informationCard span{
+    font-size:1.25rem;
+    text-align: center;
+    font-weight: bold;
+    margin-top:1rem;
+}
+
+.informationCard span.dates{
+    font-size: 0.75rem;
+    font-weight:normal;
+    margin:0;
+    color:#383838;
+}
+
+.informationCard p.description{
+    width:80%;
+    margin:0 auto;
+    padding:0;
+    size:0.5rem;
+    text-indent: 0;
+    text-align: center;
+}
+
+
+.iconContainer{
+    display:flex;
+    width:100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.iconContainer i{
+    margin:1rem;
+}
+
+footer{
+    margin-top:2rem;
+    width:100%;
+}
+
+footer span{
+    font-size:0.75rem;
+    color:#808080;
+}
+
+@media screen and (max-width: 1040px){
+    .quoteOfTheDay{
+        display:none;
+    }
+}
+
+@media screen and (max-width:740px){
+    #aboutMe{
+        flex-direction: column;
+    }
+
+    header h1{
+        font-size:1rem;
+    }
+    .portfolioImageContainer{
+        margin:auto;
+    }
+    .informationCards{
+        flex-direction:column;
+    }
+
+    .informationCard{
+        width:80%;
+        margin:1rem auto;
+    }
+}
+/*Style for calendar*/
+/*------------------------*/
+/*iframe wrapper*/
+#iframeWrapper{
+    position:fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin:auto;
+    width: 100%;
+    height:100%;
+    z-index:1000;
+    display:none;
+}
+
+.closeButtonWrapper{
+    position:absolute;
+    right:10%;
+    top:1rem;
+    height:3rem;
+    width:3rem;
+    border-radius:50%;
+    background-color: #808080;
+    transition: all 0.4s;
+    z-index:4;
+}
+
+.closeJournalButton{
+    position:relative;
+    top:-7%;
+    margin:auto;
+    text-align: center;
+    font-size:3rem;
+    color:white;
+    font-size: bold;
+    transition: all 0.4s;
+}
+
+.closeButtonWrapper:hover{
+    cursor: pointer;
+    background-color: #a9a9a9;
+}
+.closeButtonWrapper:hover .closeJournalButton{
+    transform:rotate(90deg);
+}
+iframe{
+    display:block;
+    margin:auto;
+    width:90%;
+    height:100%;
+}
+
+/*Calendar Wrapper */
+.calendarWrapper{
+    width:100%;
+    height:100%;
+    background-color:white;
+}
+
+/*Calender styling*/
+.calendar{
+    display:block;
+    position:relative;
+    top:2rem;
+    width:95%;
+    margin:auto;
+    background-color: white;
+    box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.4);
+}
+
+.displayMonth{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    text-align: center;
+    background-color: #22a7f4;
+    color: #fff;
+}
+
+/*Transition buttons*/
+.prev, .next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 23px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+}
+
+.prev:hover, .next:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*Month and day styling*/
+.weekdays {
+    background-color: #3998cf;
+    color: #fff;
+    padding: 7px 0;
+    display: flex;
+    margin:none;
+    }
+
+.days {
+    font-weight: 300;
+    display: flex;
+    flex-wrap: wrap;
+    color:#000;
+}
+
+.weekdays li,.days li {
+    text-align: center;
+    width: 14.28%;
+}
+
+.days li{
+    position:relative;
+    height:6rem;
+    overflow:hidden;
+}
+
+.days object{
+    width:98%;
+    height:98%;
+    margin:auto;
+    object-fit:cover;
+    transition:transform .5s ease;
+}
+
+.days object:hover{
+    cursor:pointer;
+    transform: scale(1.5);
+    z-index: 2 !important;
+}
+
+.dayNumber{
+    position:absolute;
+    width:2rem;
+    height:2rem;
+    top:calc(50% - 1rem);
+    left: calc(50% - 1rem);
+    z-index: 1;
+    background-color: rgba(255,255,255,0.4);
+    text-align:center;
+    line-height: 32px;
+    border-radius:50%;
+}
+.prev_date {
+    position:relative;
+    top:50%;
+    text-align:center;
+    color: #999;
+    }
+
+.today {
+    background-color: #22a7f4;
+    color: #fff;
+}
+
+.today span.dayNumber{
+    background-color: #22a7f4;
+}
+
+@media screen and (max-width:650px){
+    .weekdays{
+        display:none;
+    }
+
+    .days li{
+        width:100%;
+        height:200px;
+    }
+}
+/*Style for blog posts*/
+/*------------------------*/
+span{
+    display:block;
+}
+
+/*Picture and weather cards*/
+main div.journalInfoCards{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    max-width:90%;
+    margin:auto;
+}
+
+main div.reverseDirection{
+    flex-direction: row-reverse;
+}
+
+/*Picture*/
+main div.journalInfoCards div.imageContainer img.mainImage{
+    width:100%;
+    max-height:330px;
+    object-fit:contain;
+    border-radius:10px;
+}
+/*Location card*/
+main div.journalInfoCards div.locationCard{
+    display:flex;
+    flex-direction: column;
+    margin-left:0.5rem;
+    height: 100%;
+    min-width:330px;
+}
+
+main div.journalInfoCards div.locationCard div.locationText{
+    text-align:center;
+}
+
+main div.journalInfoCards div.locationCard div.locationText span.location{
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 300;
+    text-align:center;
+    color: rgba(0,0,0,0.7);
+    margin-top:1rem;
+}
+
+main div.journalInfoCards div.locationCard div.locationText img {
+    display:inline;
+    max-width:30px;
+}
+
+main div.journalInfoCards div.locationCard div.locationText span.temperature{
+    display:inline;
+    font-size: 2rem;
+    font-weight: 200;
+    text-align:center;
+    margin-left:0.25rem;
+    color: rgba(0,0,0,0.9);
+}
+
+main div.journalInfoCards div.locationCard div.locationText span.date{
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align:center;
+    margin-top:1rem;
+}
+
+@media screen and (max-width:650px){
+    main div.journalInfoCards{
+        flex-direction: column;
+    }
+}
+
+/*Location map*/
+main div.journalInfoCards div.locationCard div.locationMap{
+    display:block;
+    margin:auto;
+}
+.iframe-outer, .iframe-inner {
+    height: 150px;
+    width: 150px;
+}
+
+.iframe-outer {
+    display: inline-block;
+    position: relative;
+}
+
+.iframe-inner {
+    overflow: hidden;
+    border-radius: 5000px;
+    position: absolute;
+}
+
+.iframe-inner iframe {
+    height: 100%;
+    width: 100%;
+}
+
+/*Journal Contents*/
+main div.journalContents{
+    display:block;
+}
+main div.journalContents h2{
+    margin:1.5em 15%;
+}
+
+/*Media*/
+/*images*/
+main div.journalContents div.supportingImage img{
+    max-height:300px;
+    max-width:300px;
+    margin:1rem;
+    object-fit:contain;
+    border-radius:10px;
+}
+
+main div.journalContents div.supportingImage img.imageRight{
+    float:right;
+    margin-right:10%;
+}
+
+main div.journalContents div.supportingImage img.imageLeft{
+    float:left;
+    margin-left:10%;
+}
+
+main div.journalContents div.supportingImage img.imageLarge{
+    max-height:450px;
+    max-width:450px;
+}
+
+/*Image gallery*/
+main div.journalContents div.imageGalleryGrid {
+    width:80%;
+    margin:0.5rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: minmax(30px,250px);
+    gap: 10px;
+    grid-auto-flow: dense;
+    justify-content: center;
+    align-content: center;
+  }
+
+  main div.journalContents div.imageGalleryGrid div img{
+    max-height:100%;
+    max-width:100%;
+    object-fit:contain;
+    border-radius:10px;
+}
+
+main div.journalContents div.imageGalleryGrid div.landscape{
+    grid-column-end: span 2;
+}
+
+main div.journalContents div.imageGalleryGrid div.landscapeLarge{
+    grid-column-end: span 3;
+}
+
+main div.journalContents div.imageGalleryGrid div.portrait{
+    grid-row-end: span 2;
+}
+
+main div.journalContents div.imageGalleryGrid div.portraitLarge{
+    grid-row-end: span 3;
+}
+
+/*Video*/
+video{
+    max-height:300px;
+    max-width:300px;
+    margin:1rem;
+}
+
+main div.journalContents video.videoRight{
+    float:right;
+    margin-right:10%;
+}
+
+main div.journalContents video.videoLeft{
+    float:left;
+    margin-left:10%;
+}
+
+main div.journalContents video.videoLarge{
+    max-width:450px;
+    max-height:450px;
+}
