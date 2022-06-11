@@ -1,4 +1,8 @@
+//Define global variables
 var dt = new Date();
+var dataFile = require('../data/mainImageLocations.json');
+
+//function that will create all the date tags
  function renderDate() {
     dt.setDate(1);
     var day = dt.getDay();
@@ -9,22 +13,39 @@ var dt = new Date();
     document.getElementById("month").innerHTML = months[dt.getMonth()]+" "+dt.getFullYear();
     var cells = "";
 
-    var imageStartText ="<object onclick=\"openJournal('";
-    var imageMidText = "')\" data=\"./resources/media/"+dt.getFullYear() +"/"+months[dt.getMonth()]+"/";
-    var imageEndText = "/main.jpg\" type=\"image/jpeg\"></object>";
+   //Filter object for current month
+   var monthDates = '';
+   var monthDatesArray = [];
+    if (dataFile[dt.getFullYear()][months[dt.getMonth()]]!== undefined){
+      monthDates = dataFile[dt.getFullYear()][dt.getMonth()];
+      monthDatesArray = Object.keys(monthDates);
+   }
+   else{
+         monthDates = 'None';
+   }
+  
+   //Define object tag missing src data
+    var imageStartText ="<object onclick=\"openJournal('')\" data=\"";
+    var imageEndText = "\" type=\"image/jpeg\"></object>";
 
+    //Create previous date tags
     for (x = day; x > 0; x--) {
     cells += "<li><span  class='prev_date'>" + (prevDate - x + 1) + "</span></li>";
     }
 
-    console.log(day);
+    //Loop over days and add images if they are included in the file
     for (i = 1; i <= endDate; i++) {
-    if (i == today.getDate() && dt.getMonth() == today.getMonth()) cells += "<li class='today'>"+imageStartText + i + imageMidText + i+ imageEndText+"<span class='dayNumber'>"+i+"</span></li>";
-    else cells += "<li>"+imageStartText + i +imageMidText + i + imageEndText+"<span class='dayNumber'>" + i + "</span></li>";
+    if (i == today.getDate() && dt.getMonth() == today.getMonth()) cells += "<li class='today'>";
+    else cells += "<li>";
+    if (monthDatesArray.includes(i.toString())){
+      cells+=imageStartText + months[i] + imageEndText
+    }
+    cells+="<span class='dayNumber'>" + i + "</span></li>";
     }
     document.getElementsByClassName("days")[0].innerHTML = cells;
  }
 
+ //Changes date based on push buttons
  function moveDate(para) {
     if(para == "prev") {
         dt.setMonth(dt.getMonth() - 1);
@@ -34,6 +55,7 @@ var dt = new Date();
     renderDate();
  }
 
+ //Opens iframe with corresponding html journal entry file
  function openJournal(day){
     var htmlString = "./webpages/";
     var currentMonth = dt.getMonth()+1;
@@ -52,6 +74,7 @@ var dt = new Date();
     iframeWrapper.style.display = "block";
  }
 
+ //Hides iframe
  function closeJournal(){
     var iframeWrapper = document.getElementById('iframeWrapper');
     var iframe = document.getElementById('journalEntry')
