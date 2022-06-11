@@ -40,7 +40,7 @@ var dt = new Date();
     else cells += "<li>";
     if (monthDatesArray.includes(i.toString())){
 
-      cells+=imageStartText + i + imageMidText + i + monthDates[i] + imageEndText
+      cells+=imageStartText + i + imageMidText + monthDates[i] + imageEndText
     }
     cells+="<span class='dayNumber'>" + i + "</span></li>";
     }
