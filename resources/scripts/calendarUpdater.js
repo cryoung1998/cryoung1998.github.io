@@ -25,7 +25,7 @@ var dt = new Date();
    }
   
    //Define object tag missing src data
-    var imageStartText ="<object onclick=\"openJournal('";
+    var imageStartText ="<object onmousedown=\"openJournal('";
     var imageMidText = "')\" data=\"";
     var imageEndText = "\" type=\"image/jpeg\"></object>";
 
