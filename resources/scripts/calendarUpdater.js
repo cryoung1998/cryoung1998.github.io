@@ -25,7 +25,8 @@ var dt = new Date();
    }
   
    //Define object tag missing src data
-    var imageStartText ="<object onclick=\"openJournal('')\" data=\"";
+    var imageStartText ="<object onclick=\"openJournal('";
+    var imageMidText = "')\" data=\"";
     var imageEndText = "\" type=\"image/jpeg\"></object>";
 
     //Create previous date tags
@@ -39,7 +40,7 @@ var dt = new Date();
     else cells += "<li>";
     if (monthDatesArray.includes(i.toString())){
 
-      cells+=imageStartText + monthDates[i] + imageEndText
+      cells+=imageStartText + i + imageMidText + i + monthDates[i] + imageEndText
     }
     cells+="<span class='dayNumber'>" + i + "</span></li>";
     }
