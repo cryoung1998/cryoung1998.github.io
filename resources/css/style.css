@@ -333,7 +333,7 @@ iframe{
     overflow:hidden;
 }
 
-.days object{
+.days img{
     width:98%;
     height:98%;
     margin:auto;
@@ -341,7 +341,7 @@ iframe{
     transition:transform .5s ease;
 }
 
-.days object:hover{
+.days img:hover{
     cursor:pointer;
     transform: scale(1.5);
     z-index: 2 !important;

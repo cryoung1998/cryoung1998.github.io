@@ -25,9 +25,9 @@ var dt = new Date();
    }
   
    //Define object tag missing src data
-    var imageStartText ="<object onmousedown=\"openJournal('";
-    var imageMidText = "')\" data=\"";
-    var imageEndText = "\" type=\"image/jpeg\"></object>";
+    var imageStartText ="<img onmousedown='openJournal(";
+    var imageMidText = ")' src='";
+    var imageEndText = "'>";
 
     //Create previous date tags
     for (x = day; x > 0; x--) {
