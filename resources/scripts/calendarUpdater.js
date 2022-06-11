@@ -16,7 +16,8 @@ var dt = new Date();
    var monthDates = '';
    var monthDatesArray = [];
     if (dataFile[dt.getFullYear()][months[dt.getMonth()]]!== undefined){
-      monthDates = dataFile[dt.getFullYear()][dt.getMonth()];
+      monthDates = dataFile[dt.getFullYear()][months[dt.getMonth()]];
+      console.log(monthDates);
       monthDatesArray = Object.keys(monthDates);
    }
    else{
@@ -37,7 +38,8 @@ var dt = new Date();
     if (i == today.getDate() && dt.getMonth() == today.getMonth()) cells += "<li class='today'>";
     else cells += "<li>";
     if (monthDatesArray.includes(i.toString())){
-      cells+=imageStartText + months[i] + imageEndText
+
+      cells+=imageStartText + monthDates[i] + imageEndText
     }
     cells+="<span class='dayNumber'>" + i + "</span></li>";
     }
