@@ -1,6 +1,5 @@
-//Define global variables
+//Define global variables (dateData is from other script)
 var dt = new Date();
-var dataFile = require('../data/mainImageLocations.json');
 
 //function that will create all the date tags
  function renderDate() {
