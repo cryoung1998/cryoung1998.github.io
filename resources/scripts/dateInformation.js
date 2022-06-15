@@ -13,7 +13,8 @@ const dataFile = {
             "23":"https://lh3.googleusercontent.com/pw/AM-JKLU_QzdSBBTTapL-btxCVrxOYEtUkc9G9CeEz8NI_P5NXD7K6Uo-vJjEfE91PO_vBAIpAo1zMu644P70dnUdJD1TPNsTLUvoTtztD1YQg1VC13azswNmdipO1_-MCGpIgNS0MhhiXBJ-2Cxg9JExNZte=w686-h914-no?authuser=0",
             "24":"https://lh3.googleusercontent.com/pw/AM-JKLXGZIdO5gUYVmWIdqDgBI6t-Q7m4bYkr89_4C7HucaIz4ru-qD2E5M_DzQYTjbveKM9SP7_5PuvsZx-X0D7m3jLe3rwYGoANsF20GG31gOK7UZyi-SWobVh7YAmPUaj-R4A8BVpYc4iNXwQHc9DDXNP=w1218-h914-no?authuser=0",
             "25":"https://lh3.googleusercontent.com/pw/AM-JKLVQXCYHijT_r7iBG5fOHwIY1CrGGM3AIyytQqMvSeO8b_VI_nf_E2RRE81Altx3rcmS9R9Lx3G7xQC-qBGWzjuIQ4PCopYuw90W5YjBrEsfXOrPA9O58g5QB7yrmKYLV02s-rt81nb5YeM6-OAU5uH8=w1052-h789-no?authuser=0",
-            "26":"https://lh3.googleusercontent.com/pw/AM-JKLUHbftc_9C5e5p8uvVmYoj-jktzt85FiE200gsgFdagC2mfMrH-BVRq4pwrtVxoLf5vDJk0T4TkjdOALKeyiJvPMTzkKTG_mppwydSqFDLTH1gefhqF3BpJzf3rSR6anJuGwEZj79b2Zo2kphyxZMIR=w1052-h789-no?authuser=0"
+            "26":"https://lh3.googleusercontent.com/pw/AM-JKLUHbftc_9C5e5p8uvVmYoj-jktzt85FiE200gsgFdagC2mfMrH-BVRq4pwrtVxoLf5vDJk0T4TkjdOALKeyiJvPMTzkKTG_mppwydSqFDLTH1gefhqF3BpJzf3rSR6anJuGwEZj79b2Zo2kphyxZMIR=w1052-h789-no?authuser=0",
+            "27":"https://lh3.googleusercontent.com/pw/AM-JKLXQwi75aki_YTWI6sIGA9vwJEgQO6rHh8Mm3a4pCn1oyWBX8ANLqBASNsBaYGbxzvGNMPmSKDf7X_vXI-ulJHl2ZsusJ-jC0Se-LkbRI55c9wlVkZ76Oot_zzdO4orx8jhuu_N_mlfDF0tjY-WYwjAV=w1052-h789-no?authuser=0"
         }
     }
 };
