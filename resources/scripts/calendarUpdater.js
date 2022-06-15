@@ -1,4 +1,5 @@
 //Define global variables (dateData is from other script)
+import dataFile from './dateInformation'
 var dt = new Date();
 
 //function that will create all the date tags
