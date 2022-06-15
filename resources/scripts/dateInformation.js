@@ -19,5 +19,3 @@ const dataFile = {
         }
     }
 };
-
-export default dataFile;
