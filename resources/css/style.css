@@ -454,7 +454,7 @@ main div.journalInfoCards div.locationCard div.locationText span.date{
     margin-top:1rem;
 }
 
-@media screen and (max-width:650px){
+@media screen and (max-width:850px){
     main div.journalInfoCards{
         flex-direction: column;
     }
